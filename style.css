@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("fonts/icomoon.eot?u8ovsa");
+  src: url("fonts/icomoon.eot?u8ovsa#iefix") format("embedded-opentype"),
+    url("fonts/icomoon.ttf?u8ovsa") format("truetype"),
+    url("fonts/icomoon.woff?u8ovsa") format("woff"),
+    url("fonts/icomoon.svg?u8ovsa#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 100;
+}
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+}
+/* row*/
+.cards__row:not(last-child) {
+  margin-bottom: 10px;
+}
+
+.cards__row {
+  font-size: 0;
+}
+
+.card {
+  display: inline-block;
+  font-size: initial;
+  margin-left: 10px;
+  text-align-last: left;
+  transition: all 0.3s linear;
+}
+
+.card:hover {
+  transform: scale(1.1, 1.05);
+  transition: all 0.3s linear;
+  z-index: 3;
+}
+
+.card__container {
+  border-radius: 10px;
+  border: 2px solid #78828b;
+  z-index: 2;
+}
+
+.card__image {
+  margin-top: -1px;
+}
+
+.card__image img {
+  width: 240px;
+  border-radius: 10px;
+  position: relative;
+  left: -2px;
+  z-index: -1;
+}
+
+.user_name {
+  font-weight: 700;
+}
+
+.joined-info,
+.card__information__socials a {
+  color: #78828b;
+}
+
+.card__information__socials {
+  border-top: 2px solid #78828b;
+  margin-left: -12px;
+  margin-right: -12px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+/*first row*/
+.card:nth-child(n) {
+  width: calc(25% - 10px);
+}
+/*card__information*/
+.card__information {
+  padding: 10px 10px 0 10px;
+  position: relative;
+  top: -10px;
+  z-index: 3;
+  background: #fff;
+}
+
+/*socials*/
+.card__information__socials a {
+  text-decoration: none;
+}
+
+.socials_users {
+  opacity: 0.5;
+}
+
+/*styles for icons*/
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-user:before {
+  content: "\e971";
+}
+.icon-html-five2:before {
+  content: "\eae5";
+}
